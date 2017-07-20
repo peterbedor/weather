@@ -1,0 +1,30 @@
+<div class="weather-info">
+	{{ #location|notEmpty }}
+		<h1 class="weather-info__location">{{ city }}, {{ state }}</h1>
+	{{ /location }}
+	{{ #weather|notEmpty }}
+		<div class="weather-info__summary">
+			<p>{{ daily.summary }}</p>
+		</div>
+		<div class="weather-info__current">
+			<div class="weather-info__current-temp">
+				{{ current.temp }}
+			</div>
+			<div class="weather-info__current-humidity">
+				{{ current.humidity }} humidity
+			</div>
+		</div>
+		{{ #daily.data|each }}
+			<div>
+				<h6>{{ time|date }}</h6>
+				<p>{{ summary }}</p>
+				<dl>
+					<dt>High</dt>
+					<dd>{{ temperatureMax }}</dd>
+					<dt>Low</dt>
+					<dd>{{ temperatureMin }}</dd>
+				</dl>
+			</div>
+		{{ /daily.data }}
+	{{ /weather }}
+</div>

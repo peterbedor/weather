@@ -1,0 +1,7 @@
+{{ #results|notEmpty }}
+<ul class="search__results">
+	{{ #.|each }}
+		<li class="search__result{{ #active }} -is-active{{ /active }}" data-ref="searchResult">{{ formatted_address }}</li>
+	{{ /. }}
+</ul>
+{{ /results }}

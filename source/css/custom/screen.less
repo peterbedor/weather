@@ -1,0 +1,74 @@
+/*------------------------------------*\
+	# Global
+\*------------------------------------*/
+
+#global {
+	// Global helpers and state modifiers
+}
+
+
+
+
+
+/*------------------------------------*\
+	# General
+\*------------------------------------*/
+
+body {
+	// ...
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Search
+\*------------------------------------*/
+
+.search {
+	.centered-block(60);
+	.margin(top; 6);
+	.relative();
+	input&__input {
+		&.-is-active {
+			.rounded(0);
+			.rounded(top);
+		}
+	}
+	&__results-container {
+		.absolute(3.9; 0; false; 0);
+	}
+	&__results {
+		.unstyled();
+		.border(@lightGray);
+		.rounded(bottom);
+	}
+	&__result {
+		.border(bottom; @lightGray);
+		.padding(.6; 1.5);
+		.spaced(0);
+		&.-is-active {
+			.background(@lightestGray);
+		}
+		&:last-child {
+			.border(bottom; 0);
+		}
+		&:hover {
+			.background(@lightestGray);
+			.cursor();
+		}
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Weather
+\*------------------------------------*/
+
+.weather {
+	.centered-block(60);
+}
